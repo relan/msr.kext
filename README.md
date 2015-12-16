@@ -13,10 +13,15 @@ command to build the kernel extension (kext):
 Usage
 -----
 Note that since OS X 10.10 each kext must have a valid digital signature.
-Obviously kernel extensions you build do not have one. You need to enable the
-developer mode:
+Obviously kernel extensions you build do not have one. If you are on
+OS X 10.10 use this workaround:
 
     sudo nvram boot-args=kext-dev-mode=1
+
+On OS X 10.11 you need to enter Recovery by holding `Cmd`+`R` while OS X boots
+and run this command:
+
+    csrutil enable --without kext
 
 After reboot you will be able to load the kext:
 
