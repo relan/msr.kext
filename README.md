@@ -18,8 +18,8 @@ OS X 10.10 use this workaround:
 
     sudo nvram boot-args=kext-dev-mode=1
 
-On OS X 10.11 you need to enter Recovery by holding `Cmd`+`R` while OS X boots
-and run this command:
+On OS X 10.11 and macOS 10.12 you need to enter Recovery by holding `Cmd`+`R`
+while OS X boots and run this command:
 
     csrutil enable --without kext
 
